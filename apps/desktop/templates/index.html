@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant DSF</title>
+    <link rel="stylesheet" href="/static/style.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="center logo">Valorant DSF</div>
+
+        <!-- Login Section -->
+        <div id="login-section" class="card">
+            <h3>Login to Riot</h3>
+            <p>Click the button below to sign in via Riot Games.</p>
+
+            <div style="margin-top: 20px;">
+                <button type="button" onclick="startLogin()" id="login-btn">
+                    Login with Riot
+                </button>
+            </div>
+            <p id="error-msg" style="color: var(--error); display: none; margin-top: 10px;"></p>
+        </div>
+
+        <!-- Store Section -->
+        <div id="store-section" class="hidden">
+            <div id="store-grid" class="grid">
+                <!-- Items will be injected here -->
+            </div>
+            <button onclick="location.reload()"
+                style="margin-top: 20px; background: var(--accents-2); border-color: var(--accents-2);">Logout /
+                Reset</button>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

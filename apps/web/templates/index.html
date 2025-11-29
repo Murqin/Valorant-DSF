@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant DSF Web</title>
+    <link rel="stylesheet" href="/static/style.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="center logo">Valorant DSF Web</div>
+
+        <!-- Login Section -->
+        <div id="login-section" class="card">
+            <h3>Login to Riot</h3>
+            <p>We've switched to a safer login method. No password required.</p>
+
+            <div style="margin-bottom: 20px;">
+                <a href="https://auth.riotgames.com/authorize?redirect_uri=https%3A%2F%2Fplayvalorant.com%2Fopt_in&client_id=play-valorant-web-prod&response_type=token%20id_token&nonce=1&scope=account%20openid"
+                    target="_blank" style="text-decoration: none;">
+                    <button type="button"
+                        style="background: var(--success); border-color: var(--success); color: white;">
+                        1. Open Riot Login Page
+                    </button>
+                </a>
+            </div>
+
+            <p style="font-size: 13px; margin-bottom: 10px;">
+                2. After logging in, copy the full URL from your browser's address bar and paste it below:
+            </p>
+
+            <form id="login-form">
+                <textarea id="url-input" rows="4"
+                    placeholder="Paste the URL here (starts with https://playvalorant.com/opt_in...)"
+                    style="width: 100%; background: var(--bg); border: 1px solid var(--accents-2); color: var(--fg); border-radius: var(--radius); padding: 10px; font-family: var(--font-sans); margin-bottom: 16px; resize: vertical;"></textarea>
+                <button type="submit" id="login-btn">Fetch My Store</button>
+            </form>
+            <p id="error-msg" style="color: var(--error); display: none; margin-top: 10px;"></p>
+        </div>
+
+        <!-- Store Section -->
+        <div id="store-section" class="hidden">
+            <div id="store-grid" class="grid">
+                <!-- Items will be injected here -->
+            </div>
+            <button onclick="location.reload()"
+                style="margin-top: 20px; background: var(--accents-2); border-color: var(--accents-2);">Logout /
+                Reset</button>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
