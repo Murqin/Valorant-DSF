@@ -1,3 +1,8 @@
+# Note
+
+- **The coding of this tool was done entirely by AI.**
+
+
 # Valorant DSF
 ## Or with full name Valorant Daily Store Fetcher
 
